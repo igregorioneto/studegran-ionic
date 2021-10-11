@@ -1,0 +1,7 @@
+{
+  "name": "studegran",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
