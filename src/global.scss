@@ -24,3 +24,75 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root,
+:root[mode=ios],
+:root[mode=md] {
+    --ion-font-family: 'Be Vietnam', sans-serif !important;
+}
+
+.logo-white {
+  font-family: 'Mansalva', cursive;
+  color: #FFF;
+  opacity: 0.8;
+  font-size: 36px;
+}
+
+.logo-black {
+  font-family: 'Mansalva', cursive;
+  color: #333;
+  opacity: 0.8;
+}
+
+[class*=filter] {
+  position: relative
+}
+
+[class*=filter]::before {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+
+.filter-1977 {
+  -webkit-filter: sepia(.5) hue-rotate(-30deg) saturate(1.4);
+  filter: sepia(.5) hue-rotate(-30deg) saturate(1.4)
+}
+
+.filter-aden {
+  -webkit-filter: sepia(.2) brightness(1.15) saturate(1.4);
+  filter: sepia(.2) brightness(1.15) saturate(1.4)
+}
+
+.filter-aden::before {
+  background: rgba(125, 105, 24, .1);
+  content: "";
+  mix-blend-mode: multiply
+}
+
+.filter-amaro {
+  -webkit-filter: sepia(.35) contrast(1.1) brightness(1.2) saturate(1.3);
+  filter: sepia(.35) contrast(1.1) brightness(1.2) saturate(1.3)
+}
+
+.filter-amaro::before {
+  background: rgba(125, 105, 24, .2);
+  content: "";
+  mix-blend-mode: overlay
+}
+
+.filter-ashby {
+  -webkit-filter: sepia(.5) contrast(1.2) saturate(1.8);
+  filter: sepia(.5) contrast(1.2) saturate(1.8)
+}
+
+.filter-ashby::before {
+  background: rgba(125, 105, 24, .35);
+  content: "";
+  mix-blend-mode: lighten
+}
+

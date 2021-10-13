@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-label classlogo-black>studegran</ion-label>
+  </ion-toolbar>
+  <ion-button slot="end">
+    <ion-item>
+      <ion-avatar (click)="showOptions()">
+        <img src="{{ user.image }}">
+      </ion-avatar>
+    </ion-item>
+  </ion-button>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let post of posts | async">
+    <img src="{{ post.image }}">
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/take-picture">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
